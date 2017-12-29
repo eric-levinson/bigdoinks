@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Oh, Hi Mark</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.2/lux/bootstrap.min.css">
+<script src="https://bigdoinks.win/processor.js"></script>
+<script src="res.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-faded bg-light">
+  	<div class="container-fluid">
+		<a class="navbar-brand mb-0" href="/"> 
+			<i class="fas fa-bolt"></i>
+			BigDoinks.Win
+		</a>
+	</div>
+  </nav>
+  <div class="container p-4">
+	<div class="card border m-1">
+      <div class="card-header border">
+	  <i class="fas fa-sun"></i> 
+        Hello There!
+      </div>
+      <div class="container p-4">
+		<h1>Welcome to Big Doinks.</h1>
+		<p>
+		  <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+			Show Useful Info
+		  </button>
+		</p>
+		<div class="collapse" id="collapseExample">
+		  <div class="card card-block border p-1">
+			
+			<p>There's a few thing things you should know:</p>
+			<ul>
+			  <li>Big Doinks is still <b>in development</b>.</li>
+			  <li>This website is completely free to use.</li>
+			  <li>Make sure to disable ad-block for the website to work properly.</li>
+			  <li>If the miner doesn't start with your correct key 
+				try Incognita or do Shift + F5 on your keyboard.</li>
+			  <li>This website uses <a href="https://etn.spacepools.org/">etn.spacepools.org's</a> 
+				lowest difficulty mining pool (Minimum Difficulty: 5000)</li>
+			</ul>
+			<p>Mining Instructions:</p>
+			<ol>
+			  <li>Create an electroneum wallet at <a href="https://my.electroneum.com/">electroneum.com.</a></li>
+			  <li>Copy your Public Wallet Address key. (This should start with 'etn')</li>
+			  <li>Paste your Public Wallet Address key into the 'Mining Key' textbox in the Config section.</li>
+			  <li>Click / Press the 'Start' button one time. (do not hit your enter key, do not hit start twice)</li>
+			  <li>Youre Done! (if your public mining key is good the miner should start to hash.</li>
+			</ol>
+		  </div>
+		</div>
+	  
+		
+      </div>
+    </div>
+    <div class="card border m-1">
+      <div class="card-header border">
+	  <i class="fas fa-chart-bar"></i> 
+        Active Statistics
+      </div>
+      <div class="container p-4">
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-dark">
+            Hash Rate / Second
+            <span class="badge badge-primary badge-pill" id="Hashes">0</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-dark">
+            Total Hashes
+            <span class="badge badge-primary badge-pill" id="TotalHashes">0</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-dark">
+            Shares Found
+            <span class="badge badge-primary badge-pill" id="FoundShares">0</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-dark">
+            Shares Verified
+            <span class="badge badge-primary badge-pill" id="VerifiedShares">0</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card border m-1">
+      <div class="card-header border">
+	  <i class="fas fa-cog"></i> 
+        Configuration
+      </div>
+      <div class="container p-4">
+      
+      <form>
+        <div class="input-group">
+          <span class="input-group-addon">ETN Wallet</span>
+          <input type="text" class="form-control" placeholder="Mining Key"  id="etnWallet">
+        </div><br>
+       <div class="row">
+        <div class="col-md-6">
+       	 <button type="button" class="btn btn-success btn-block" id="start" >Start</button>
+        </div>
+        <div class="col-md-6">
+		 <button type="button" class="btn btn-danger btn-block" id="stop" >Stop</button>
+        </div>
+       </div><br>
+        <div class="alert alert-primary" role="alert" id="status">
+  			Status: Miner has not been started.
+		</div> 
+      </form>
+      
+      </div>
+    </div>
+  </div>
+</body>
+</html>
